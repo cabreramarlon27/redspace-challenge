@@ -1,0 +1,18 @@
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.post-date {
+    color: #999;
+    font-size: 14px;
+    padding-top: 10px;
+    display: block;
+}
+.entry-container {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}

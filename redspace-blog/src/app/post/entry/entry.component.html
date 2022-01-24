@@ -1,0 +1,11 @@
+
+<ng-template #defaultBody>
+<div class="entry-container">
+    <h1>{{post.name}}</h1>
+<img src="{{post.thumbImage}}" class="img-fluid" alt="{{post.name}}"/>
+<span class="post-date">{{post.date | date}}</span>
+<p [innerHTML]="post.content"></p>
+</div>
+</ng-template>
+<app-main-layout [bodyTemplate]="defaultBody"></app-main-layout>
+<router-outlet></router-outlet>

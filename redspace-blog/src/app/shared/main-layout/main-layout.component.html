@@ -1,0 +1,30 @@
+  <!-- nav header should be another component -->
+  <nav class="navbar">
+    <!-- LOGO -->
+    <div class="logo">Redspace Blog</div>
+    <!-- NAVIGATION MENU -->
+    <ul class="nav-links">
+      <!-- USING CHECKBOX HACK -->
+      <input type="checkbox" id="checkbox_toggle" />
+      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+      <!-- NAVIGATION MENUS -->
+      <div class="menu">
+        <li>
+          <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/">Home</a>
+        </li>
+
+      </div>
+    </ul>
+  </nav>
+<div class="container">
+
+
+  <main role="main" class="">
+    <ng-template #defaultBody>
+      Default layout body
+    </ng-template>
+    <ng-container *ngTemplateOutlet="bodyTemplate ? bodyTemplate: defaultBody">
+    </ng-container>
+  </main>
+</div>
+<router-outlet></router-outlet>

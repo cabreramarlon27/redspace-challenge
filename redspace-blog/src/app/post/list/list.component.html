@@ -1,0 +1,31 @@
+<ng-template #defaultBody>
+
+  <div class="container">
+
+    <div *ngFor="let post of posts">
+      <div class="blog-entry">
+        <a href="" class="blog-entry-img">
+          <img src="{{post.thumbImage}}" class="img-fluid" class="img cirgle-img" alt="{{post.name}}">
+        </a>
+
+        <div class="blog-entry-text">
+          <h3 class="blog-entry-title">{{post.name}}</h3>
+          <div class="blog-entry-meta">
+            <p class="meta">
+              <span><i class="icon-calendar mr-2"></i>{{post.date | date}}</span>
+            </p>
+          </div>
+          <div class="blog-entry-content">
+            <p [innerHTML]="post.excerpt"></p>
+          </div>
+          <p>
+          <a routerLinkActive="active"  routerLink="/{{post.id}}" class="btn-readmore">Read More <span class="ion-ios-arrow-forward"></span></a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</ng-template>
+<app-main-layout [bodyTemplate]="defaultBody"></app-main-layout>
